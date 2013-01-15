@@ -1,3 +1,9 @@
 [submodule "java"]
 	path = java
 	url = https://github.com/opscode-cookbooks/java
+[submodule "runit"]
+	path = runit
+	url = https://github.com/opscode-cookbooks/runit
+[submodule "memcached"]
+	path = memcached
+	url = https://github.com/opscode-cookbooks/memcached

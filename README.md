@@ -6,7 +6,11 @@ A collection of Chef recipes and a Vagrantfile, intended for the creation of a V
 
 You'll find a collection of recipes here, none of which is originally "mine". I'll list the credits and links to the originals here:
 
-* [java](https://github.com/opscode-cookbooks/java), submodule pointing to release 1.8.0
+* [java](https://github.com/opscode-cookbooks/java), default opscode recipe
+* [runit](https://github.com/opscode-cookbooks/runit), default opscode recipe
+* [memcached](https://github.com/opscode-cookbooks/memcached), default opscode recipe
+* Apache Kafka, redid this according to [librato's recipe](https://github.com/librato/kafka-cookbook) and [Webtrend's recipe](http://community.opscode.com/cookbooks/kafka). Did not fork as they are much more confgurable (and complex), I just wanted Kafka & Zookeeper to work
+* Riak, fork of the [opscode hosted recipe](http://community.opscode.com/cookbooks/riak). Modified so that the listen address is 0.0.0.0 (otherwise it would listen to eth0, whereas vagrant adds eth1 as the defined interface)
 
 The Chef recipes are only tested in chef-solo mode.
 

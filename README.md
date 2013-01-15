@@ -7,7 +7,7 @@ A collection of Chef recipes and a Vagrantfile, intended for the creation of a V
 
 * Install [VirtualBox](https://www.virtualbox.org/)
 * Install [Vagrant](http://www.vagrantup.com/)
-* Clone this repo
+* Clone this repo and init submodules (`git submodule update --init`)
 * Start a server: run `vagrant up` at repo's root. This will fetch the default server image defined in `Vagrantfile`, start it and provision the services defined it in the file. The default image is Ubuntu 12.04 (Precise) 64-bit. For more server images ("boxes"), see [http://www.vagrantbox.es/].
 
 Done! you should be able to access the running server with `vagrant ssh`. The default IP address of the server is 10.10.10.10, accessible only from the host, so you can see the services installed there.

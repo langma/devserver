@@ -33,14 +33,14 @@ Vagrant::Config.run do |config|
   # some recipes and/or roles.
 
   config.vm.provision :chef_solo do |chef|
-    chef.cookbooks_path = "../cookbooks"
+    chef.cookbooks_path = "."
   
     chef.run_list= [
       "recipe[java]",
       "recipe[riak]",
       "recipe[runit]",
       "recipe[memcached]",
-      "recipe[kafka2]"
+      "recipe[kafka]"
     ]
 
     chef.json = { 

@@ -94,6 +94,7 @@ ruby_block "fix hostname" do
 		ipaddress = node[:network][:interfaces][:eth1][:addresses].select { |address, data| data[:family] == "inet" }[0][0]
 		file = Chef::Util::FileEdit.new("#{service_dir}/config/server.properties")
   		file.search_file_replace("#hostname=", "hostname=#{ipaddress}")
+      file.search_file_replace("zk.connect=localhost:2181", "zk.connect=#{ipaddress}:2181")
   		file.write_file
   	end
 end
